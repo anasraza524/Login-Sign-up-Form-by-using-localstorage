@@ -81,29 +81,31 @@ a{
 
 <h2>Login Form</h2>
 
-<form  onsubmit="login(); return false" >
+<form  onsubmit=" login(); return false" >
 
   <div class="loing">
     <label for="username"><i class="fa fa-user" style="font-size:24px"></i></label>
-    <input id="loginusername" type="text" placeholder="Enter Username" name="uname" required>
+    <input id="loginusername" type="text" placeholder="Enter Username" name="uname" >
 
     <label for="psw"><i class="material-icons">lock</i></label>
-    <input id="loginpassword" type="password" placeholder="Enter Password" name="psw" required>
+    <input id="loginpassword" type="password" placeholder="Enter Password" name="psw">
         
-    <button class="login" type="submit">Login</button>
+    <button  class="login">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+  
+  </form>  
+    <span class="psw">Forgot <a href="">password?</a></span>
+<form onsubmit="signupcheck(); return false">
+    <span class="psw"><button type="submit">Sign in</button></span>
 
-    <span class="psw"><a href="./signup.html">Sign Up</a></span>
-
-    
+  </form>
   </div>
 
    
   </div>
-</form>
+
 
 </body>
 </html>
