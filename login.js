@@ -59,15 +59,30 @@ function login() {
    const loginusername = document.getElementById('loginusername').value;
    const loginpassword = document.getElementById('loginpassword').value;
 
+   //  if(users.length == 0 ){
+   //    alert("Enter Value")
+   //    return;
+   // }
+   if (users.length == 0 && loginusername.length !== 0 && loginpassword.length !== 0) {
+      alert("You Don`t Have an Account \n ! Please Sign in First ")
+      return;
+   }
 
-
-
+   else if (loginusername.length === 0 && loginpassword.length !== 0) {
+      alert("Enter Email ")
+      return;
+   }
+   else if (loginusername.length !== 0 && loginpassword.length === 0) {
+      alert("Enter Password ")
+      return;
+   }
    for (let i = 0; i < users.length; i++) {
       if (users[i].K_email === loginusername && users[i].K_password === loginpassword) {
          move();
 
          return;
       }
+
 
 
 
@@ -105,6 +120,13 @@ function login() {
 //    console.log('Not a registered user')
 //    alert("Not a registered user")
 //    }
+if (users.length === 0) {
+   signuppage();
+}
+else {
+   signupcheck()
+}
+
 
 function signupcheck() {
    const loginusernamecheck = document.getElementById('loginusername').value;
